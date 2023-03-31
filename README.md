@@ -2,7 +2,7 @@
 This image has minor tweaks to the upstream fedora-toolbox:
 
 - DNF no longer prompts for confirmation
-- RPM Fusion repositories are enabled
+- RPM Fusion and Microsoft's VS Code repositories are enabled
 
 ## Installation
 To use coolbox as the default toolbox image, simply execute
