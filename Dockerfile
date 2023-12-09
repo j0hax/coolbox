@@ -15,8 +15,11 @@ RUN sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.mi
 RUN curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 
 # Enable Sublime Code repository
-RUN sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
-RUN sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+RUN rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+RUN dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+
+# Enable Iosevka COPR (the best monospace font)
+RUN dnf copr enable peterwu/iosevka
 
 # Upgrade to latest versions of everything
 RUN dnf5 upgrade
