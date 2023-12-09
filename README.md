@@ -2,10 +2,12 @@
 This image has minor tweaks to the upstream fedora-toolbox:
 
 - DNF no longer prompts for confirmation
-- RPM Fusion and Microsoft's repositories are enabled (Including VS Code and Powershell)
-- DNF5 is installed and symlinked to `dnf` by default
-
-## Installation
+- DNF5 is installed
+- Various extra software repositories are enabled, but not installed:
+  - Microsoft VS Code and PowerShell
+  - Sublime Text Stable
+  - Iosevka Font Family COPR
+  
 To use coolbox as the default toolbox image, simply execute
 
 ```
