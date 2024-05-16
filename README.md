@@ -5,8 +5,6 @@ This image has minor tweaks to the upstream fedora-toolbox:
 - DNF5 is installed
 - Various extra software repositories are enabled, but not installed:
   - Microsoft VS Code and PowerShell
-  - Sublime Text Stable
-  - Iosevka Font Family COPR
   
 To use coolbox as the default toolbox image, simply execute
 
