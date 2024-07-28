@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora-toolbox:rawhide
+FROM registry.fedoraproject.org/fedora-toolbox:40
 
 # Keep DNF from asking for confirmation
 RUN echo "assumeyes=True" >> /etc/dnf/dnf.conf
