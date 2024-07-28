@@ -13,5 +13,8 @@ RUN dnf5 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 RUN sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 RUN echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
+# Install Vim as default editor
+RUN dnf install --allowerasing vim-default-editor
+
 # Upgrade to latest versions of everything
 RUN dnf5 upgrade
